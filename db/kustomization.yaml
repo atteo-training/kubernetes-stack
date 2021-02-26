@@ -1,0 +1,6 @@
+resources:
+    - postgresql.yaml
+secretGenerator:
+    - name: postgres
+      files:
+          - secrets/postgres.postgres.password

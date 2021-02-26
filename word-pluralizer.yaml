@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: word-pluralizer
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: word-pluralizer
+  template:
+    metadata:
+      labels:
+        app: word-pluralizer
+    spec:
+      containers:
+        - name: word-pluralizer
+          image: ecomcukpoc.azurecr.io/word-pluralizer:latest
+          ports:
+            - name: http-api
+              containerPort: 80
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: word-pluralizer
+spec:
+  selector:
+    app: word-pluralizer
+# type: ClusterIP
+  ports:
+    - port: 80
+      targetPort: http-api

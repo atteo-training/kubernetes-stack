@@ -1,0 +1,7 @@
+This files install Strimzi operator for Kafka Cluster.
+
+
+For the instructions of how this files are prepared see:
+https://strimzi.io/docs/operators/latest/deploying.html#deploying-cluster-operator-to-watch-whole-cluster-str
+
+File 000-add-cluster-role-bindings.yaml was prepared instead of a point 3. of the above instruction.
