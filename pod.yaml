@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pluralizer-ui
+spec:
+  containers:
+    - name: pluralizer-ui
+      image: ecomcukpoc.azurecr.io/pluralizer-ui:latest
